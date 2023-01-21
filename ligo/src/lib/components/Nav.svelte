@@ -1,3 +1,28 @@
+<script>
+  import { onMount } from 'svelte';
+	import auth from '../../authService';
+import { isAuthenticated, user } from '../../store'
+
+  let auth0Client;
+  
+  onMount(async () => {
+    auth0Client = await auth.createClient();
+
+    isAuthenticated.set(await auth0Client.isAuthenticated());
+    user.set(await auth0Client.getUser());
+
+    console.log('fuck')
+  });
+
+  function login(){
+    auth.loginWithPopup(auth0Client);
+  }
+
+  function logout() {
+    auth.logout(auth0Client);
+  }
+
+</script>
 <nav class="flex items-center justify-between flex-wrap p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
         <img alt="ligo logo" src="/assets/logo.png"class="w-10 mr-2">
@@ -17,9 +42,20 @@
           About
         </a>
       </div>
+      {#if $isAuthenticated}
       <div>
-        <a href="#" class="inline-block text-sm px-6 py-2 mr-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+        <a href="#" 
+        on:click={logout}
+        class="inline-block text-sm px-6 py-2 mr-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+            Log out</a>
+      </div>
+      {:else}
+      <div>
+        <a href="#" 
+        on:click={login}
+        class="inline-block text-sm px-6 py-2 mr-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
             Log in</a>
       </div>
+      {/if}
     </div>
   </nav>
