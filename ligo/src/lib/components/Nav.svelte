@@ -39,7 +39,6 @@ import { isAuthenticated, user } from '../../store'
         <span class="font-Jomhuria text-5xl">Ligo</span>
         </a>
     </div>
-    <!-- TODO: fix breakpoint? -->
     <div class="block lg:hidden">
       <button on:click="{() => menu.classList.toggle('hidden')}"
       class="flex items-center md:hidden px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
