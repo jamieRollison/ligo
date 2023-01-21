@@ -1,2 +1,5 @@
-<h1 class="text-orange-400">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="flex w-max m-auto">
+    <h1 class="font-Jomhuria text-9xl text-white">
+        Ligo
+    </h1>
+</div>
