@@ -82,9 +82,3 @@ import { isAuthenticated, user } from '../../store'
       </ul>
     </div>
   </nav>
-
-  <style>
-    *:hover {
-      background-color: none;
-    }
-  </style>
