@@ -35,8 +35,12 @@
         background-color: #d5f0f2;
     }
 
-    :global(li.selected, li:hover) {
+    :global(li.selected) {
         background-color: #dbe1e3 !important ;
+    }
+
+    :global(li:hover[data-svelte-typeahead]) {
+        background-color: #dbe1e3;
     }
 
     :global(.svelte-1t4elht) {
