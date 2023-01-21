@@ -11,7 +11,7 @@
             Ligo
         </h1>
         <p class="font-WorkSans text-white text-2xl">
-    Your new tool to calculate the environmental impact of your coordinated event, and helping the environemt 
+    Your new tool to calculate the environmental impact of your coordinated event, and helping the environment 
     through analyzing your carbon footprint.  
         </p>
     <SearchBarAndButton/>
