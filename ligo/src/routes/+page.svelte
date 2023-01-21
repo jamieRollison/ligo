@@ -1,6 +1,11 @@
 <script>
 	import SEO from '$lib/components/SEO.svelte';
 	import SearchBarAndButton from '$lib/components/SearchBarAndButton.svelte';
+
+	/**
+	 * @type {{ events: any; }}
+	 */
+	 export let data;
 </script>
 
 <SEO />
@@ -12,6 +17,6 @@
 			Your new tool to calculate the environmental impact of your coordinated event, and helping the
 			environment through analyzing your carbon footprint.
 		</p>
-		<SearchBarAndButton />
+		<SearchBarAndButton events = {data.events}/>
 	</div>
 </div>

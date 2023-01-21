@@ -1,9 +1,7 @@
 import { Client } from 'pg';
-
 import { DATABASE_URL } from '../../../auth.config';
 
-export const queryTest = async () => {
-	console.log('happening');
+const getEvents = async () => {
 	const client = new Client({
 		connectionString: DATABASE_URL
 	});
@@ -11,10 +9,10 @@ export const queryTest = async () => {
 		await client.connect();
 		const res = await client.query('SELECT * FROM events');
 		await client.end();
-		return res;
+    return res.rows;
 	} catch (e) {
 		console.log(e);
 	}
 };
 
-export default queryTest;
+export { getEvents };

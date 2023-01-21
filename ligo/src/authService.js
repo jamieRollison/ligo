@@ -19,7 +19,6 @@ async function loginWithPopup(client, options) {
 	popupOpen.set(true);
 	try {
 		await client.loginWithPopup(options);
-		console.log(await client.getUser());
 		user.set(await client.getUser());
 		isAuthenticated.set(true);
 	} catch (e) {

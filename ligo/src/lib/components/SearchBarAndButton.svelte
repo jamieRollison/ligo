@@ -2,14 +2,16 @@
 	import Typeahead from 'svelte-typeahead';
 
 	const data = [
-		{ state: 'WWDC 2019' },
-		{ state: 'Grace Hopper 2022' },
-		{ state: 'BoilerMake X' },
-		{ state: 'HackIllinois' },
-		{ state: 'Welding Convention of Michigan' }
+		{ name: 'WWDC 2019' },
+		{ name: 'Grace Hopper 2022' },
+		{ name: 'BoilerMake X' },
+		{ name: 'HackIllinois' },
+		{ name: 'Welding Convention of Michigan' }
 	];
 
-	const extract = (/** @type {{ state: any; }} */ item) => item.state;
+    export let events;
+
+	const extract = (/** @type {{ name: any; }} */ event) => event.name;
 </script>
 
 <div class="font-WorkSans flex flex-col my-10">
