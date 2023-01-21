@@ -2,6 +2,7 @@
       import SEO from '$lib/components/SEO.svelte';
       import SearchBarAndButton from "$lib/components/SearchBarAndButton.svelte";
 </script>
+
 <SEO />
 <div class="flex flex-col items-center md:flex-row ">
     <img class="md:w-1/2" src="/assets/recycle_2.png" alt="recycle_2 throwing out trash">
