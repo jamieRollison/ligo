@@ -50,52 +50,36 @@ import { isAuthenticated, user } from '../../store'
     <div class="hidden w-full md:flex md:items-center md:w-auto" bind:this={menu}>
       <ul class="text-sm md:flex md:justify-between ">
         <li>
-          <a href="/how_it_works" class="font-WorkSans block mt-2 md:mt-0 lg:inline-block text-cyan-100 hover:text-white mr-4"> 
+          <a href="/how_it_works" class="font-WorkSans block mt-2 md:mt-0 pl-6 md:pl-0 text-cyan-100 hover:text-white mr-4"> 
             <!-- TODO: add back in margin top for md and less -->
           How it Works
         </a>
         </li>
         <li>
-          <a href="/about" class="font-WorkSans block mt-2 md:mt-0 lg:inline-block text-cyan-100 hover:text-white mr-4">
+          <a href="/about" class="font-WorkSans block mt-2 md:mt-0 pl-6 md:pl-0  text-cyan-100 hover:text-white mr-4">
           About
         </a>
         </li>
-        <li>
-          Login 
-          <!-- TODO: actual login link -->
+
+        {#if $isAuthenticated}
+        <li class="mt-2 md:mt-0">
+          <span class="font-WorkSans pl-6 md:pl-2 py-2 mr-4 mt-2 text-sm leading-none text-white lg:mt-0">
+            Hi, {$user.given_name}
+          </span>
+          <a href="#" 
+          on:click={logout}
+          class="font-WorkSans text-sm px-6 py-2 mt-2 md:mt-0 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+              Log out</a>
         </li>
+        {:else}
+        <li class="mt-2 md:mt-0">
+          <a href="#" 
+          on:click={login}
+          class="font-WorkSans text-sm px-6 py-2 mt-2 md:mt-0 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+              Log in</a>
+        </li>
+        {/if}
 
       </ul>
-
     </div>
-
-
-    <!-- <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <a href="/how_it_works" class="font-WorkSans block mt-4 lg:inline-block lg:mt-0 text-cyan-100 hover:text-white mr-4">
-          How it Works
-        </a>
-        <a href="/about" class="font-WorkSans block mt-4 lg:inline-block lg:mt-0 text-cyan-100 hover:text-white mr-4">
-          About
-        </a>
-      </div>
-      {#if $isAuthenticated}
-      <div>
-        <span class="font-WorkSans inline-block text-sm px-6 py-2 mr-4 leading-none text-white mt-4 lg:mt-0">
-          Hi, {$user.given_name}
-        </span>
-        <a href="#" 
-        on:click={logout}
-        class="font-WorkSans inline-block text-sm px-6 py-2 mr-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-            Log out</a>
-      </div>
-      {:else}
-      <div>
-        <a href="#" 
-        on:click={login}
-        class="font-WorkSans inline-block text-sm px-6 py-2 mr-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-            Log in</a>
-      </div>
-      {/if}
-    </div> -->
   </nav>
