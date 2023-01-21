@@ -3,6 +3,9 @@
 	import auth from '../../authService';
 import { isAuthenticated, user } from '../../store'
 
+  /**
+	 * @type {import("@auth0/auth0-spa-js").Auth0Client}
+	 */
   let auth0Client;
   
   onMount(async () => {
@@ -10,17 +13,17 @@ import { isAuthenticated, user } from '../../store'
 
     isAuthenticated.set(await auth0Client.isAuthenticated());
     user.set(await auth0Client.getUser());
-
-    console.log('fuck')
   });
 
   function login(){
-    auth.loginWithPopup(auth0Client);
+    // @ts-ignore
+    auth.loginWithPopup(auth0Client, {});
   }
 
   function logout() {
     auth.logout(auth0Client);
   }
+
 
 </script>
 <nav class="flex items-center justify-between flex-wrap p-6">
@@ -44,6 +47,9 @@ import { isAuthenticated, user } from '../../store'
       </div>
       {#if $isAuthenticated}
       <div>
+        <span class="inline-block text-sm px-6 py-2 mr-4 leading-none text-white mt-4 lg:mt-0">
+          Hi, {$user.given_name}
+        </span>
         <a href="#" 
         on:click={logout}
         class="inline-block text-sm px-6 py-2 mr-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">

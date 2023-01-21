@@ -11,11 +11,15 @@ async function createClient() {
   return auth0Client;
 }
 
+/**
+ * @param {{ loginWithPopup: (arg0: any) => any; getUser: () => {} | PromiseLike<{}>; }} client
+ * @param {any} options
+ */
 async function loginWithPopup(client, options) {
   popupOpen.set(true);
   try {
     await client.loginWithPopup(options);
-
+    console.log(await client.getUser());
     user.set(await client.getUser());
     isAuthenticated.set(true);
   } catch (e) {
@@ -26,6 +30,9 @@ async function loginWithPopup(client, options) {
   }
 }
 
+/**
+ * @param {{ logout: () => any; }} client
+ */
 function logout(client) {
   return client.logout();
 }
