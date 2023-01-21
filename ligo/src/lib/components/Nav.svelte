@@ -61,8 +61,8 @@ import { isAuthenticated, user } from '../../store'
         </li>
 
         {#if $isAuthenticated}
-        <li class="mt-2 md:mt-0">
-          <span class="font-WorkSans pl-6 md:pl-2 py-2 mr-4 mt-2 text-sm leading-none text-white lg:mt-0">
+        <li class="mt-4 md:mt-0 ml-6 md:ml-0">
+          <span class="hidden md:inline font-WorkSans pl-2 py-2 mr-4 mt-2 text-sm leading-none text-white lg:mt-0">
             Hi, {$user.given_name}
           </span>
           <a href="#" 
