@@ -1,5 +1,6 @@
 <script>
       import SEO from '$lib/components/SEO.svelte';
+      import SearchBarAndButton from "$lib/components/SearchBarAndButton.svelte";
 </script>
 
 <SEO />
@@ -13,5 +14,6 @@
     Your new tool to calculate the environmental impact of your coordinated event, and helping the environemt 
     through analyzing your carbon footprint.  
         </p>
+    <SearchBarAndButton/>
     </div>  
 </div>
