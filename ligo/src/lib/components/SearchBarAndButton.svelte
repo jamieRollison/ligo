@@ -15,7 +15,7 @@
 
 
 
-<div class = "flex flex-col my-10">
+<div class = "font-WorkSans flex flex-col my-10">
     <!-- TODO: add icon -->
     <Typeahead class="rounded"
         hideLabel
@@ -25,7 +25,7 @@
     />
 
     <!-- TODO: fix colors -->
-    <button class="font-WorkSans bg-white/50 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-4">
+    <button class="font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2">
         Couldn't find your event? Create a new page for it!
     </button>
 </div>
@@ -37,5 +37,18 @@
 
     :global(li.selected, li:hover) {
         background-color: #dbe1e3 !important ;
+    }
+
+    :global(.svelte-1t4elht) {
+        border-radius: 8px;
+    }
+
+    :global(.svelte-1t4elht input) {
+        border-radius: 10px;
+    }
+
+
+    :global(.svelte-5m0wg6 hide-label) {
+        border-radius: 0px;
     }
 </style>
