@@ -17,9 +17,12 @@
 	<Typeahead class="rounded" hideLabel placeholder={`Search for your event...`} {data} {extract} />
 
 	<!-- TODO: fix colors -->
-	<button class="font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2">
+	<a
+		class="font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
+		href="/add_event"
+	>
 		Couldn't find your event? Create a new page for it!
-	</button>
+	</a>
 </div>
 
 <style>
