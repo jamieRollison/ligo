@@ -1,6 +1,6 @@
 const config = {
-  domain: "dev-n1mrvffjfh2zld1i.us.auth0.com",
-  clientId: "IjbijoUMVKIJgUIFFGrfJrNJg3CBXFUp"
+	domain: 'dev-n1mrvffjfh2zld1i.us.auth0.com',
+	clientId: 'IjbijoUMVKIJgUIFFGrfJrNJg3CBXFUp'
 };
 
 export default config;
