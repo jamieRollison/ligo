@@ -32,6 +32,7 @@
 	"dependencies": {
 		"@auth0/auth0-spa-js": "^2.0.2",
 		"rollup": "^3.10.1",
+		"svelte-forms-lib": "^2.0.1",
 		"vercel": "^28.13.0"
 	}
 }
