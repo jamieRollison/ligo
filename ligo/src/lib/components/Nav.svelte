@@ -51,7 +51,6 @@ import { isAuthenticated, user } from '../../store'
       <ul class="text-sm md:flex md:justify-between ">
         <li>
           <a href="/how_it_works" class="font-WorkSans block mt-2 md:mt-0 pl-6 md:pl-0 text-cyan-100 hover:text-white mr-4"> 
-            <!-- TODO: add back in margin top for md and less -->
           How it Works
         </a>
         </li>
@@ -83,3 +82,9 @@ import { isAuthenticated, user } from '../../store'
       </ul>
     </div>
   </nav>
+
+  <style>
+    *:hover {
+      background-color: none;
+    }
+  </style>
