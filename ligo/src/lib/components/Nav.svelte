@@ -61,9 +61,10 @@ import { isAuthenticated, user } from '../../store'
 
         {#if $isAuthenticated}
         <li class="mt-4 md:mt-0 ml-6 md:ml-0">
+          <!-- TODO: move to main page
           <span class="hidden md:inline font-WorkSans pl-2 py-2 mr-4 mt-2 text-sm leading-none text-white lg:mt-0">
             Hi, {$user.given_name}
-          </span>
+          </span> -->
           <a href="#" 
           on:click={logout}
           class="font-WorkSans text-sm px-6 py-2 mt-2 md:mt-0 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
