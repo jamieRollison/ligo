@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Work+Sans&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +6,5 @@
 html, body {
     background: linear-gradient(#62b8d4, #a4d9eb);
     height: 100%;
+    margin-inline: 20px;
 }

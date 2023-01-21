@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Jomhuria: ['Jomhuria', 'cursive'],
+        WorkSans: ['Work Sans', 'sans-serif'],
       },
     },
   },
