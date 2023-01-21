@@ -10,7 +10,7 @@
 		<h1 class="font-Jomhuria text-9xl text-white">Ligo</h1>
 		<p class="font-WorkSans text-white text-2xl">
 			Your new tool to calculate the environmental impact of your coordinated event, and helping the
-			environemt through analyzing your carbon footprint.
+			environment through analyzing your carbon footprint.
 		</p>
 		<SearchBarAndButton />
 	</div>
