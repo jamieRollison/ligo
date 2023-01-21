@@ -12,6 +12,7 @@
 		auth0Client = await auth.createClient();
 
 		isAuthenticated.set(await auth0Client.isAuthenticated());
+		// @ts-ignore
 		user.set(await auth0Client.getUser());
 	});
 
