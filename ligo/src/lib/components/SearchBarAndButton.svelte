@@ -11,7 +11,6 @@
   ];
 
   const extract = (/** @type {{ state: any; }} */ item) => item.state;
-  const extract = (/** @type {{ state: any; }} */ item) => item.state;
 </script>
 
 
