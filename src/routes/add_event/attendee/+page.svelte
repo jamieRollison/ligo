@@ -17,14 +17,10 @@
       servings: 0,
       pre_order: "", // Yes or No
       vegitarian: "", // Yes or No
-      clothing_distribution: "",
       cutlery: "",
       single_use: "",
       single_use_container: "",
       compost: "",
-      plan_to_attend: 0,
-      shirts: 0,
-      stickers: 0,
     },
     // validate: (values) => {
     //   let errs = {};
