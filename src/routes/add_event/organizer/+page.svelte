@@ -1,8 +1,11 @@
 <script>
+  // @ts-nocheck
+
   import { createForm } from "svelte-forms-lib";
   import SEO from "$lib/components/SEO.svelte";
+  import { isAuthenticated } from "../../../store";
 
-  const { form, errors, handleChange } = createForm({
+  const { form, handleChange } = createForm({
     initialValues: {
       name: "",
       location: "",
@@ -25,16 +28,19 @@
       shirts: 0,
       stickers: 0,
     },
-    validate: (values) => {
-      let errs = {};
-      if (values.name === "") {
-        errs["name"] = "Name of the event is required!";
-      }
-      if (values.location === "") {
-        errs["state"] = "State is required!";
-      }
-      return errs;
-    },
+    // validate: (values) => { can't use without handleSubmit
+    //   let errs = {};
+    //   if (values.name === "") {
+    //     errs["name"] = "Name of the event is required!";
+    //   }
+    //   if (values.location === "") {
+    //     errs["state"] = "State is required!";
+    //   }
+    //   if (!$isAuthenticated) {
+    //     errs["auth"] = "Please log in before submission!";
+    //   }
+    //   return errs;
+    // },
     onSubmit: (values) => {},
   });
 </script>
@@ -57,13 +63,14 @@
         class="font-WorkSans text-black rounded-sm h-7"
         id="name"
         name="name"
+        required
         on:change={handleChange}
         bind:value={$form.name}
       />
     </div>
-    {#if $errors.name}
-      <small class="font-WorkSans text-red-500">{$errors.name}</small>
-    {/if}
+    <!-- {#if errors.name}
+      <small class="font-WorkSans text-red-500">{errors.name}</small>
+    {/if} -->
 
     <div class="flex flex-col mt-4">
       <label class="font-WorkSans text-white" for="startDate"
@@ -75,6 +82,7 @@
         id="startDate"
         name="startDate"
         type="date"
+        required
         on:change={handleChange}
         bind:value={$form.startDate}
       />
@@ -88,6 +96,7 @@
         class="font-WorkSans text-black rounded-sm h-7"
         id="location"
         name="location"
+        required
         on:change={handleChange}
         bind:value={$form.location}
       >
@@ -98,9 +107,9 @@
         <option>California</option>
       </select>
     </div>
-    {#if $errors.location}
-      <small class="font-WorkSans text-red-500">{$errors.location}</small>
-    {/if}
+    <!-- {#if errors.location}
+      <small class="font-WorkSans text-red-500">{errors.location}</small>
+    {/if} -->
 
     <div class="flex flex-col mt-3">
       <label class="font-WorkSans text-white" for="attendance"
@@ -110,13 +119,14 @@
         class="font-WorkSans text-black rounded-sm h-7"
         id="attendance"
         name="attendance"
+        required
         on:change={handleChange}
         bind:value={$form.attendance}
       />
     </div>
-    {#if $errors.attendance}
-      <small class="font-WorkSans text-red-500">{$errors.attendance}</small>
-    {/if}
+    <!-- {#if errors.attendance}
+      <small class="font-WorkSans text-red-500">{errors.attendance}</small>
+    {/if} -->
 
     <div class="flex flex-col mt-3">
       <label class="font-WorkSans text-white" for="plan_to_attend"
@@ -345,9 +355,16 @@
       </div>
     </div>
     <div class="flex flex-col items-center mt-4">
+      {#if !$isAuthenticated}
+        <small class="font-WorkSans text-red-500"
+          >Please log in before submisison</small
+        >
+      {/if}
+
       <button
-        class="font-WorkSans bg-none border-white border-2 text-white hover:bg-white hover:text-teal-500 w-40 rounded-sm py-2"
-        type="submit">Submit</button
+        class="font-WorkSans bg-none border-white border-2 text-white hover:bg-white hover:text-teal-500 w-40 rounded-sm py-2 mt-2"
+        type="submit"
+        disabled={$isAuthenticated ? `disabled` : ""}>Submit</button
       >
     </div>
   </form>
