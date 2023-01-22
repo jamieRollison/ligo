@@ -14,7 +14,7 @@ export async function get(collection, param, value) {
   if (param === '') {
     const result = await (await client.db('ligo').collection(collection).find({}).toArray()).map((event) => {
       // @ts-ignore
-      event._id = event._id.toString();
+      event._id = event._id.toString()
       return event;
     });
     return result

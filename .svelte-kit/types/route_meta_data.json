@@ -13,6 +13,8 @@
 		"src/routes/+layout.js"
 	],
 	"/add_event/attendee": [
+		"src/routes/add_event/attendee/+page.js",
+		"src/routes/add_event/attendee/+page.server.js",
 		"src/routes/+layout.js"
 	],
 	"/add_event/organizer": [
