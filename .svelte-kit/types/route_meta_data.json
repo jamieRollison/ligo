@@ -13,6 +13,7 @@
 		"src/routes/+layout.js"
 	],
 	"/[event_id]_info_page": [
+		"src/routes/[event_id]_info_page/+page.js",
 		"src/routes/+layout.js"
 	]
 }
