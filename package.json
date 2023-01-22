@@ -31,6 +31,8 @@
 	"type": "module",
 	"dependencies": {
 		"@auth0/auth0-spa-js": "^2.0.2",
+		"dotenv": "^16.0.3",
+		"mongodb": "^4.13.0",
 		"pg": "^8.8.0",
 		"rollup": "^3.10.1",
 		"svelte-forms-lib": "^2.0.1",

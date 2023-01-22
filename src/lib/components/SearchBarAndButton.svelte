@@ -1,6 +1,5 @@
 <script>
 	import Typeahead from 'svelte-typeahead';
-	import { events } from '$lib/stores/events.js';
 
 	const mock_data = [
 		{ name: 'WWDC 2019' },
@@ -10,12 +9,19 @@
 		{ name: 'Welding Convention of Michigan' }
 	];
 
-	const extract = (/** @type {{ name: any; }} */ item) => item.name;
+	/**
+     * @type { {name: string;}[] }
+     */
+	 export let events;
+
+	// events.subscribe(value => console.log(value))
+
+	const extract = (/** @type {{ name: any; }} */ item) => { console.log(item.name) ; return item.name };
 </script>
 
 <div class="font-WorkSans flex flex-col my-10">
 	<!-- TODO: add icon -->
-	<Typeahead class="rounded" hideLabel placeholder={`Search for your event...`} data={mock_data} {extract} />
+	<Typeahead class="rounded" hideLabel placeholder={`Search for your event...`} data={events} {extract} />
 
 	<!-- TODO: fix colors -->
 	<a
