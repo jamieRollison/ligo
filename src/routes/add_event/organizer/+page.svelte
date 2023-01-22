@@ -1,7 +1,7 @@
 <script>
-	import { createForm } from 'svelte-forms-lib';
-	import SEO from '$lib/components/SEO.svelte';
-	import states from '$lib/states'
+  import { createForm } from "svelte-forms-lib";
+  import SEO from "$lib/components/SEO.svelte";
+  import states from "$lib/states";
 
   const { form, errors, handleChange } = createForm({
     initialValues: {
@@ -13,14 +13,11 @@
       servings: 0,
       pre_order: "", // Yes or No
       vegitarian: "", // Yes or No
-      clothing_distribution: "",
       cutlery: "",
       single_use: "",
       single_use_container: "",
       compost: "",
       plan_to_attend: 0,
-      shirts: 0,
-      stickers: 0,
     },
     validate: (values) => {
       let errs = {};
@@ -45,41 +42,43 @@
     </h1>
   </div>
 
-	<form method='POST'>
-		<div class="flex flex-col">
-			<label class="font-WorkSans text-white" for="name">What is the name of your event?</label>
-			<input
-				class="font-WorkSans text-black rounded-sm h-7"
-				id="name"
-				name="name"
-				on:change={handleChange}
-				bind:value={$form.name}
-			/>
-		</div>
-		{#if $errors.name}
-			<small class="font-WorkSans text-red-500">{$errors.name}</small>
-		{/if}
-		<div class="flex flex-col mt-4">
-			<label class="font-WorkSans text-white" for="location"
-				>In what U.S. state is your event located?
-			</label>
-			<select
-				class="font-WorkSans text-black rounded-sm h-7"
-				id="location"
-				name="location"
-				on:change={handleChange}
-				bind:value={$form.location}
-			>
-				<option />
-				{#each states as state}
-					<option>{state.state}</option>
-				{/each}
-			</select>
-		</div>
-		{#if $errors.location}
-			<small class="font-WorkSans text-red-500">{$errors.location}</small>
-		{/if}
-		
+  <form method="POST">
+    <div class="flex flex-col">
+      <label class="font-WorkSans text-white" for="name"
+        >What is the name of your event?</label
+      >
+      <input
+        class="font-WorkSans text-black rounded-sm h-7"
+        id="name"
+        name="name"
+        on:change={handleChange}
+        bind:value={$form.name}
+      />
+    </div>
+    {#if $errors.name}
+      <small class="font-WorkSans text-red-500">{$errors.name}</small>
+    {/if}
+    <div class="flex flex-col mt-4">
+      <label class="font-WorkSans text-white" for="location"
+        >In what U.S. state is your event located?
+      </label>
+      <select
+        class="font-WorkSans text-black rounded-sm h-7"
+        id="location"
+        name="location"
+        on:change={handleChange}
+        bind:value={$form.location}
+      >
+        <option />
+        {#each states as state}
+          <option>{state.state}</option>
+        {/each}
+      </select>
+    </div>
+    {#if $errors.location}
+      <small class="font-WorkSans text-red-500">{$errors.location}</small>
+    {/if}
+
     <div class="flex flex-col mt-4">
       <label class="font-WorkSans text-white" for="start_date"
         >When was your event held? (if it ran for multiple days, pick the
@@ -267,4 +266,5 @@
         type="submit">Submit</button
       >
     </div>
+  </form>
 </div>
