@@ -2,7 +2,6 @@
   import { isAuthenticated } from "../../store";
 </script>
 
-<!-- TODO: styling - add another graphic at the top of this page - maybe svgs around the whole thing? -->
 <!-- TODO: backend - default is not authenticated, ugly loading -->
 
 <div class="my-10 md:mx-40 lg:mx-60">

@@ -1,1 +1,3 @@
-add event for attendee
+<div>
+    random text
+</div>
