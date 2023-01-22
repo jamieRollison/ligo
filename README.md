@@ -32,3 +32,5 @@ Additionally, we took into account the carbon footprint of excess food waste und
 | Excess food | 0.941 kg / serving |  [From My Emissions Calculator](https://myemissions.green/food-carbon-footprint-calculator/ ) |
 | Excess food composted  | 0.341 kg / serving  |  [From the San Jose Gov't](https://www.sanjoseca.gov/home/showpublisheddocument?id=198 ) |
 | Excess vegetarian food | 0.244 kg / serving |  [From a peer reviewed paper]([https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing](https://pubmed.ncbi.nlm.nih.gov/18546681/) |
+
+Please keep in mind that carbon emissions don't tell the whole story of the impact of an action - food waste worsens food insecurity, and unecessary small plastics are a danger to marine life. However, the purpose of this product is to summarize this impact to bring attention to all the daily choices that we take for granted.
