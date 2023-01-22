@@ -26,6 +26,7 @@
       current_event.set(e?.detail?.original);
       goto(`${e?.detail?.original?._id}_info_page`);
     }}
+
   />
 
   <!-- TODO: fix colors -->

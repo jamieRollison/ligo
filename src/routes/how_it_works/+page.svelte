@@ -2,6 +2,7 @@
   import SEO from "$lib/components/SEO.svelte";
   import SearchBarAndButton from "$lib/components/SearchBarAndButton.svelte";
 </script>
+<SEO title="How it works" />
 
 <div class="mx-10 md:mx-40 flex flex-col items-center">
   <h1 class="font-WorkSans text-white text-3xl mt-10 text-center animate-pulse">
@@ -15,8 +16,6 @@
     <p class="text-gray-500 font-WorkSans text-center mt-2">
       If you're an attendee, search for your event in the search bar.
     </p>
-
-    <SearchBarAndButton />
 
     <h1 class="font-WorkSans text-white text-3xl text-center">
       Step 2: Fill out the information about the event
