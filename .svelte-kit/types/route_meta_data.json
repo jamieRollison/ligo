@@ -7,6 +7,8 @@
 		"src/routes/+layout.js"
 	],
 	"/add_event": [
+		"src/routes/add_event/+page.js",
+		"src/routes/add_event/+page.server.js",
 		"src/routes/+layout.js"
 	],
 	"/how_it_works": [
