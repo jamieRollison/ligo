@@ -25,6 +25,12 @@
 	"/how_it_works": [
 		"src/routes/+layout.js"
 	],
+	"/review_[event_id]/attendee": [
+		"src/routes/+layout.js"
+	],
+	"/review_[event_id]/organizer": [
+		"src/routes/+layout.js"
+	],
 	"/[event_id]_info_page": [
 		"src/routes/[event_id]_info_page/+page.js",
 		"src/routes/[event_id]_info_page/+page.server.js",
