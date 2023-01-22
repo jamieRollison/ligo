@@ -114,6 +114,19 @@
       <small class="font-WorkSans text-red-500">{$errors.attendance}</small>
     {/if}
 
+    <div class="flex flex-col mt-3">
+      <label class="font-WorkSans text-white" for="plan_to_attend"
+        >How many people did you plan to attend the event?</label
+      >
+      <input
+        class="font-WorkSans text-black rounded-sm h-8"
+        id="plan_to_attend"
+        name="plan_to_attend"
+        on:change={handleChange}
+        bind:value={$form.plan_to_attend}
+      />
+    </div>
+
     <div class="flex flex-col mt-4">
       <label class="font-WorkSans text-white" for="food"
         >Did your event provide food?
@@ -186,6 +199,23 @@
             <option>No</option>
           </select>
 
+          <label
+            class="font-WorkSans text-gray-600 mt-2"
+            for="single_use_container"
+            >Was the catering served in single-use containers?
+          </label>
+          <select
+            class="font-WorkSans text-black rounded-sm h-7"
+            id="single_use_container"
+            name="single_use_container"
+            on:change={handleChange}
+            bind:value={$form.single_use_container}
+          >
+            <option />
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
           <label class="font-WorkSans text-gray-600 mt-3" for="pre_order"
             >Did your event ask for preferences to preorder food ahead of time?
           </label>
@@ -215,23 +245,6 @@
             <option>Yes</option>
             <option>No</option>
           </select>
-
-          <label
-            class="font-WorkSans text-gray-600 mt-2"
-            for="single_use_container"
-            >Was the catering served in single-use containers?
-          </label>
-          <select
-            class="font-WorkSans text-black rounded-sm h-7"
-            id="single_use_container"
-            name="single_use_container"
-            on:change={handleChange}
-            bind:value={$form.single_use_container}
-          >
-            <option />
-            <option>Yes</option>
-            <option>No</option>
-          </select>
         </div>
       {/if}
 
@@ -250,19 +263,6 @@
           <option>Yes</option>
           <option>No</option>
         </select>
-      </div>
-
-      <div class="flex flex-col mt-3">
-        <label class="font-WorkSans text-white" for="plan_to_attend"
-          >How many people did you plan to attend the Event?</label
-        >
-        <input
-          class="font-WorkSans text-black rounded-sm h-8"
-          id="plan_to_attend"
-          name="plan_to_attend"
-          on:change={handleChange}
-          bind:value={$form.plan_to_attend}
-        />
       </div>
     </div>
     <div class="flex flex-col items-center mt-4">
