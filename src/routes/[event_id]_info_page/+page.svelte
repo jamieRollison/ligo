@@ -46,12 +46,12 @@
       <!-- TODO: disable buttons if user tries clicking when unauth -->
 
       <!-- TODO: check that event doesn't already have an organizer review -->
-      <a href="/review_event_id/organizer">
+      <!-- <a href="/review_event_id/organizer">
         <button
           class="font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
           >Were you an organizer? Claim this event!</button
         >
-      </a>
+      </a> -->
 
       <!-- TODO: check that att hasn't already reviewed this event -->
       <a href="/review_event_id/attendee">

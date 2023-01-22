@@ -21,7 +21,7 @@ export const dictionary = {
 	"/add_event/attendee": [~6],
 	"/add_event/organizer": [~7],
 	"/how_it_works": [8],
-	"/review_[event_id]/attendee": [9],
+	"/review_[event_id]/attendee": [~9],
 	"/review_[event_id]/organizer": [10],
 	"/[event_id]_info_page": [~3]
 };

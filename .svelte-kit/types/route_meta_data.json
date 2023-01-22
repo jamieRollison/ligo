@@ -27,6 +27,7 @@
 	],
 	"/review_[event_id]/attendee": [
 		"src/routes/review_[event_id]/attendee/+page.js",
+		"src/routes/review_[event_id]/attendee/+page.server.js",
 		"src/routes/+layout.js"
 	],
 	"/review_[event_id]/organizer": [
