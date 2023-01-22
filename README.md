@@ -26,3 +26,9 @@ We calculate this with knowing the carbon footprint of some of the items that ar
 | Plates | 0.003 kg/unit | [From Plastic Footprint](https://plasticfootprint.ryanphung.com/)
 | Single Use Containers | 1.7kg/unit | [From Woodly](https://woodly.com/carbon_neutrality/what-is-the-carbon-footprint-of-plastic/)
 
+Additionally, we took into account the carbon footprint of excess food waste under different conditions:
+| Menu Item  | Carbon Cost |Resource |
+| ------------- |  ---- | ----- |
+| Excess food | 0.941 kg / serving |  [From My Emissions Calculator](https://myemissions.green/food-carbon-footprint-calculator/ ) |
+| Excess food composted  | 0.341 kg / serving  |  [From the San Jose Gov't](https://www.sanjoseca.gov/home/showpublisheddocument?id=198 ) |
+| Excess vegetarian food | 0.244 kg / serving |  [From a peer reviewed paper]([https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing](https://pubmed.ncbi.nlm.nih.gov/18546681/) |
