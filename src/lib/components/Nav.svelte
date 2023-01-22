@@ -75,7 +75,7 @@
             Hi, {$user.given_name}
           </span> -->
 					<a
-						href="#"
+						href="/"
 						on:click={logout}
 						class="font-WorkSans text-sm px-6 py-2 mt-2 md:mt-0 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
 					>
@@ -85,7 +85,7 @@
 			{:else}
 				<li class="mt-2 md:mt-0">
 					<a
-						href="#"
+						href="/"
 						on:click={login}
 						class="font-WorkSans text-sm px-6 py-2 mt-2 md:mt-0 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
 					>
