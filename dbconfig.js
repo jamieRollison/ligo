@@ -1,0 +1,1 @@
+export const mongo = 'mongodb+srv://dev:72nq5nHuFiG2kct@ligo.5aw5w7d.mongodb.net/?retryWrites=true&w=majority'
