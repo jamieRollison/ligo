@@ -14,12 +14,12 @@
     and provide you with a sustainability score. You can share that score with your
     event guests, and also view suggestions to being even more green next time!
     <br /><br />
-    Find out more about this project on our <a href='https://devpost.com/software/ligo'>DevPost!</a>
-  </p>
+    Find out more about this project on our <a class='underline' href='https://devpost.com/software/ligo'>DevPost!</a>
+  </p><br/><br/>
   <a
     href="/how_it_works"
-    class="text-cyan-700 font-WorkSans bg-transparent border-2 border-cyan-700 p-3 rounded hover:bg-cyan-700 hover:text-white mb-10"
-  >
+    class="mt-4 text-cyan-700 font-WorkSans bg-transparent border-2 border-cyan-700 p-3 rounded hover:bg-cyan-700 hover:text-white mb-10"
+  > 
     <button> Learn how it works </button></a
   >
 </div>
