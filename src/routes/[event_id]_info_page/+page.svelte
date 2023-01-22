@@ -27,7 +27,7 @@
         <h2 class="font-WorkSans text-8xl text-white flex-auto">
           {$current_event.carbon}
         </h2>
-        <h3 class="font-WorkSans text-2xl text-white">Tons of CO2</h3>
+        <h3 class="font-WorkSans text-2xl text-white">kg of CO2</h3>
       </div>
       <div>
         <h2 class="font-WorkSans text-8xl text-white">
@@ -101,30 +101,60 @@
       Suggestions for improvement
     </h2>
 
+    <h3 class="font-Jomhuria text-4xl text-white">Small changes:</h3>
     <ul class="text-gray-700 list-disc pl-6">
       <li>
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. "
-        </p>
+        Distribute information electronically using QR codes instead of large
+        paper pamphlets.
       </li>
       <li>
-        <p>
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum."
-        </p>
+        Use biodegradable tableware or, even better, reusable tableware in
+        smaller events.
+      </li>
+      <li>Donate untouched leftover food to local food banks.</li>
+      <li>
+        Encourage recycling and composting by keeping several recycle/composting
+        cans available for guests. Keep these cans at high-traffic points; a
+        composting bin at the door to a cafeteria after meals for food waste, a
+        recycling bin at the exit for name tags, etc..
       </li>
       <li>
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. "
-        </p>
+        If a significant number of guests are traveling from the same location,
+        consider organizing some kind of bus transportation or carpool system.
+      </li>
+      <li>
+        Opt for a large water jug and dispenser with cups instead of
+        distributing small water bottles. Similarly, consider bulk snacks handed
+        out sanitarily (muffins, trail mix/chips in cups, etc.) over
+        individually packaged snack bags.
+      </li>
+    </ul>
+
+    <h3 class="font-Jomhuria text-4xl text-white">Larger changes:</h3>
+    <ul class="text-gray-700 list-disc pl-6">
+      <li>
+        Choose a local catering service with more sustainable practices, like
+        using reusable serving containers, traveling less, and offering
+        low-carbon menu options like less meat.
+      </li>
+      <li>
+        Limit food waste or over-catering by surveying guests ahead of time for
+        their preferences from your caterer’s menus.
+      </li>
+      <li>
+        Consider shifting your marketing focuses to digital options or less
+        carbon-intensive swag; choose stickers over t-shirts, etc. Remember,
+        even giving away reusable water bottles or bags has a worse impact when
+        most of your guests probably already have one such item to reuse.
+      </li>
+      <li>
+        Choose an event location close to a community hub or transportation hubs
+        (airports, bus/train stations, etc.) so guests have to commute less.
+      </li>
+      <li>
+        Partner with event locations, caterers, and other businesses that work
+        with sustainable habits and/or have some 3rd party sustainability
+        certification (such as LEED, APEX/ASTM, Green Key, or Green Leaders)
       </li>
     </ul>
   </div>
