@@ -14,15 +14,21 @@ Currently, there is no way for events at a large scale such as conventions, prem
 ### How it works
 A user is able to select an event they organized or attended, answer a few questions on a form about waste production, and contribute the crowdsourced score of how envrionmentally concious the event was. 
 
-We calculate this with knowing the carbon footprint of some of the items that are given out at spaces such as conventions, showcases, and hackathons.
+We calculate this with knowing the carbon footprint of some of the items that are given out at spaces such as conventions, showcases, and hackathons. For each item, we researched their average footprint in terms of equivalent carbon dioxide used throughout its lifecycle, making necerssary assumptions along the way. Below are some examples of these calculations and the sources we used:
 
-| Item  | Carbon Cost | Water Cost | Resource |
-| ------------- | ------------ | ---- | ----- |
-| A t-shirt  | C0.1 kg / unit | 120 li/use | [Link](https://www.smithsonianmag.com/innovation/whats-environmental-footprint-t-shirt-180962885/) |
-| Cap  | 0.51kg/unit  | ... | [Link](https://www.topiku.co/impact) |
-| Sweater | 11.03kg/unit | ... | [assuming 50% cotton, 50% polyester, 0.45 kg weight, like this common reprinted model](https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing) |
-| Stickers and Paper | 0.005kg/units | ... | [assuming mid-sized sticker sheet, two sheets of paper, plus a bit for glue](https://www.researchgate.net/figure/Carbon-footprint-of-office-paper_fig2_235712203)
-| Plastic single-use cutlery | 0.003kg/units | ... | [Link](https://woodly.com/carbon_neutrality/what-is-the-carbon-footprint-of-plastic/) |
-| Plates | 0.003 kg/unit | ... | [Link](https://plasticfootprint.ryanphung.com/)
-| Single Use Containers | 1.7kg/unit | ... | [Link](https://woodly.com/carbon_neutrality/what-is-the-carbon-footprint-of-plastic/)
+| Item  | Carbon Cost |Resource |
+| ------------- |  ---- | ----- |
+| A t-shirt  | C0.1 kg / unit |  [From The Smithsonian](https://www.smithsonianmag.com/innovation/whats-environmental-footprint-t-shirt-180962885/) |
+| Cap  | 0.51kg/unit  |  [From Topiku](https://www.topiku.co/impact) |
+| Sweater | 11.03kg/unit |  [From Ethical Consumer, assuming an everage shirt of 50%/50% cotton-polyester blend](https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing) |
+| Stickers and Paper | 0.005kg/units | [A peer-reviewed paper, assuming mid-sized sticker sheet, two sheets of paper, plus a bit for glue](https://www.researchgate.net/figure/Carbon-footprint-of-office-paper_fig2_235712203)
+| Plastic single-use cutlery | 0.003kg/units | [From Woodly](https://woodly.com/carbon_neutrality/what-is-the-carbon-footprint-of-plastic/) |
+| Plates | 0.003 kg/unit | [From Plastic Footprint](https://plasticfootprint.ryanphung.com/)
+| Single Use Containers | 1.7kg/unit | [From Woodly](https://woodly.com/carbon_neutrality/what-is-the-carbon-footprint-of-plastic/)
 
+Additionally, we took into account the carbon footprint of excess food waste under different conditions:
+| Menu Item  | Carbon Cost |Resource |
+| ------------- |  ---- | ----- |
+| Excess food | 0.941 kg / serving |  [From My Emissions Calculator](https://myemissions.green/food-carbon-footprint-calculator/ ) |
+| Excess food composted  | 0.341 kg / serving  |  [From the San Jose Gov't](https://www.sanjoseca.gov/home/showpublisheddocument?id=198 ) |
+| Excess vegetarian food | 0.244 kg / serving |  [From a peer reviewed paper]([https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing](https://pubmed.ncbi.nlm.nih.gov/18546681/) |
