@@ -1,1 +1,5 @@
-export const prerender = false;
+export const prerender = newFunction();
+
+function newFunction() {
+    return false;
+}

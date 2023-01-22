@@ -4,14 +4,16 @@ export const manifest = {
 	assets: new Set(["assets/girl_holding.png","assets/logo.png","assets/metal.png","assets/recycle_1.png","assets/recycle_2.png","assets/world.png","favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-6367f502.js","imports":["_app/immutable/start-6367f502.js","_app/immutable/chunks/index-c9c3e0a4.js","_app/immutable/chunks/singletons-7fd09b75.js","_app/immutable/chunks/index-152aec2f.js"],"stylesheets":[],"fonts":[]},
+		entry: {"file":"_app/immutable/start-0595cc12.js","imports":["_app/immutable/start-0595cc12.js","_app/immutable/chunks/index-5e875181.js","_app/immutable/chunks/singletons-f408d665.js","_app/immutable/chunks/index-f4dacbac.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
 			() => import('./nodes/3.js'),
 			() => import('./nodes/5.js'),
 			() => import('./nodes/6.js'),
-			() => import('./nodes/7.js')
+			() => import('./nodes/7.js'),
+			() => import('./nodes/9.js'),
+			() => import('./nodes/10.js')
 		],
 		routes: [
 			{
@@ -33,6 +35,20 @@ export const manifest = {
 				pattern: /^\/add_event\/organizer\/?$/,
 				params: [],
 				page: { layouts: [0], errors: [1], leaf: 5 },
+				endpoint: null
+			},
+			{
+				id: "/review_[event_id]/attendee",
+				pattern: /^\/review_([^/]+?)\/attendee\/?$/,
+				params: [{"name":"event_id","optional":false,"rest":false,"chained":false}],
+				page: { layouts: [0], errors: [1], leaf: 6 },
+				endpoint: null
+			},
+			{
+				id: "/review_[event_id]/organizer",
+				pattern: /^\/review_([^/]+?)\/organizer\/?$/,
+				params: [{"name":"event_id","optional":false,"rest":false,"chained":false}],
+				page: { layouts: [0], errors: [1], leaf: 7 },
 				endpoint: null
 			},
 			{
