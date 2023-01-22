@@ -104,5 +104,4 @@ dist
 .tern-port
 
 # DB secret file
-api/dbconfig.js
 src/lib/db/dbconfig.js

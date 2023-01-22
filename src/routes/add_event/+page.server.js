@@ -1,6 +1,6 @@
 export const actions = {
-  newEvent: ({request}) => {
+  newEvent: ({ request }) => {
     const data = request.FormData();
     console.log(data);
-  }
-}
+  },
+};
