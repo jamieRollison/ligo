@@ -1,15 +1,14 @@
 <script>
   import Typeahead from "svelte-typeahead";
+  /**
+   * @type { {name: string;}[] }
+   */
+  export let events;
 
-  const data = [
-    { state: "WWDC 2019" },
-    { state: "Grace Hopper 2022" },
-    { state: "BoilerMake X" },
-    { state: "HackIllinois" },
-    { state: "Welding Convention of Michigan" },
-  ];
-
-  const extract = (/** @type {{ state: any; }} */ item) => item.state;
+  const extract = (/** @type {{ name: any; }} */ item) => {
+    console.log(item.name);
+    return item.name;
+  };
 </script>
 
 <div class="font-WorkSans flex flex-col my-10">
@@ -18,7 +17,7 @@
     class="rounded"
     hideLabel
     placeholder={`Search for your event...`}
-    {data}
+    data={events}
     {extract}
   />
 

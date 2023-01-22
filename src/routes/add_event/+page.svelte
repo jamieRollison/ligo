@@ -18,7 +18,7 @@
       >
         Are you an Organizer or Attendee of this event?
       </h1>
-      <img src="assets/girl_holding.png" alt="girl holding a calendar">
+      <img src="assets/girl_holding.png" alt="girl holding a calendar" />
     </div>
 
     <div

@@ -1,16 +1,18 @@
 <script>
-  import { createForm } from "svelte-forms-lib";
-  import SEO from "$lib/components/SEO.svelte";
+	import { createForm } from 'svelte-forms-lib';
+	import SEO from '$lib/components/SEO.svelte';
+	import states from '$lib/states'
 
-  const { form, errors, handleChange, handleSubmit } = createForm({
+  const { form, errors, handleChange } = createForm({
     initialValues: {
       name: "",
-      state: "",
-      num_of_attendees: 0,
+      location: "",
+      start_date: Date(),
+      attendance: 0,
       food: "", // Yes or No
       servings: 0,
       pre_order: "", // Yes or No
-      vegetarian: "", // Yes or No
+      vegitarian: "", // Yes or No
       clothing_distribution: "",
       cutlery: "",
       single_use: "",
@@ -25,14 +27,12 @@
       if (values.name === "") {
         errs["name"] = "Name of the event is required!";
       }
-      if (values.state === "") {
+      if (values.location === "") {
         errs["state"] = "State is required!";
       }
       return errs;
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values));
-    },
+    onSubmit: (values) => {},
   });
 </script>
 
@@ -45,60 +45,71 @@
     </h1>
   </div>
 
-  <form on:submit={handleSubmit}>
-    <div class="flex flex-col">
-      <label class="font-WorkSans text-white" for="name"
-        >What is the name of your event?</label
+	<form method='POST'>
+		<div class="flex flex-col">
+			<label class="font-WorkSans text-white" for="name">What is the name of your event?</label>
+			<input
+				class="font-WorkSans text-black rounded-sm h-7"
+				id="name"
+				name="name"
+				on:change={handleChange}
+				bind:value={$form.name}
+			/>
+		</div>
+		{#if $errors.name}
+			<small class="font-WorkSans text-red-500">{$errors.name}</small>
+		{/if}
+		<div class="flex flex-col mt-4">
+			<label class="font-WorkSans text-white" for="location"
+				>In what U.S. state is your event located?
+			</label>
+			<select
+				class="font-WorkSans text-black rounded-sm h-7"
+				id="location"
+				name="location"
+				on:change={handleChange}
+				bind:value={$form.location}
+			>
+				<option />
+				{#each states as state}
+					<option>{state.state}</option>
+				{/each}
+			</select>
+		</div>
+		{#if $errors.location}
+			<small class="font-WorkSans text-red-500">{$errors.location}</small>
+		{/if}
+		
+    <div class="flex flex-col mt-4">
+      <label class="font-WorkSans text-white" for="start_date"
+        >When was your event held? (if it ran for multiple days, pick the
+        earliest)</label
       >
       <input
         class="font-WorkSans text-black rounded-sm h-7"
-        id="name"
-        name="name"
+        id="start_date"
+        name="start_date"
+        type="date"
         on:change={handleChange}
-        bind:value={$form.name}
+        bind:value={$form.start_date}
       />
     </div>
-    {#if $errors.name}
-      <small class="font-WorkSans text-red-500">{$errors.name}</small>
-    {/if}
     <div class="flex flex-col mt-3">
-      <label class="font-WorkSans text-white" for="num_of_attendees"
+      <label class="font-WorkSans text-white" for="attendance"
         >How many attendees were present at the event?</label
       >
       <input
         class="font-WorkSans text-black rounded-sm h-7"
-        id="num_of_attendees"
-        name="num_of_attendees"
+        id="attendance"
+        name="attendance"
         on:change={handleChange}
-        bind:value={$form.num_of_attendees}
+        bind:value={$form.attendance}
       />
     </div>
-    {#if $errors.num_of_attendees}
-      <small class="font-WorkSans text-red-500"
-        >{$errors.num_of_attendees}</small
-      >
+    {#if $errors.attendance}
+      <small class="font-WorkSans text-red-500">{$errors.attendance}</small>
     {/if}
-    <div class="flex flex-col mt-4">
-      <label class="font-WorkSans text-white" for="state"
-        >In what U.S. state is your event located?
-      </label>
-      <select
-        class="font-WorkSans text-black rounded-sm h-7"
-        id="state"
-        name="state"
-        on:change={handleChange}
-        bind:value={$form.state}
-      >
-        <option />
-        <option>Indiana</option>
-        <option>Michigan</option>
-        <option>Illinois</option>
-        <option>California</option>
-      </select>
-    </div>
-    {#if $errors.state}
-      <small class="font-WorkSans text-red-500">{$errors.state}</small>
-    {/if}
+
     <div class="flex flex-col mt-4">
       <label class="font-WorkSans text-white" for="food"
         >Did your event provide food?
@@ -186,15 +197,15 @@
             <option>No</option>
           </select>
 
-          <label class="font-WorkSans text-gray-600 mt-3" for="vegetarian"
+          <label class="font-WorkSans text-gray-600 mt-3" for="vegitarian"
             >Did your event offer vegetarian options?
           </label>
           <select
             class="font-WorkSans text-black rounded-sm h-7"
-            id="vegetarian"
-            name="vegetarian"
+            id="vegitarian"
+            name="vegitarian"
             on:change={handleChange}
-            bind:value={$form.vegetarian}
+            bind:value={$form.vegitarian}
           >
             <option />
             <option>Yes</option>
@@ -256,5 +267,4 @@
         type="submit">Submit</button
       >
     </div>
-  </form>
 </div>
