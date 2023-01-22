@@ -11,9 +11,10 @@
     footprint for the events you host, or the events you are a part of.
     <br /><br />
     After asking a series of questions, Ligo will calculate your carbon footprint
-    and provide you with a score that is accessible by those who attended your event
-    alongside messages from atendees, who noted the sustainability efforts you made.
+    and provide you with a sustainability score. You can share that score with your
+    event guests, and also view suggestions to being even more green next time!
     <br /><br />
+    Find out more about this project on our <a href='https://devpost.com/software/ligo'>DevPost!</a>
   </p>
   <a
     href="/how_it_works"
