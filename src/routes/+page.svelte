@@ -1,6 +1,10 @@
 <script>
 	import SEO from '$lib/components/SEO.svelte';
 	import SearchBarAndButton from '$lib/components/SearchBarAndButton.svelte';
+	/**
+     * @type {{ events: any; }}
+     */
+	 export let data;
 </script>
 
 <SEO />
@@ -12,52 +16,52 @@
 			Your new tool to calculate the environmental impact of your coordinated event, and helping the
 			environment through analyzing your carbon footprint.
 		</p>
-		<SearchBarAndButton />
+		<SearchBarAndButton events={data.events}/>
 	</div>
 </div>
 
 <style>
-	img:hover {
-		/* Start the shake animation and make the animation last for 0.5 seconds */
-		animation: shake 0.5s;
+  img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
 
-		/* When the animation is finished, start again */
-		animation-iteration-count: infinite;
-	}
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
 
-	@keyframes shake {
-		0% {
-			transform: translate(1px, 1px) rotate(0deg);
-		}
-		10% {
-			transform: translate(-1px, -2px) rotate(-1deg);
-		}
-		20% {
-			transform: translate(-3px, 0px) rotate(1deg);
-		}
-		30% {
-			transform: translate(3px, 2px) rotate(0deg);
-		}
-		40% {
-			transform: translate(1px, -1px) rotate(1deg);
-		}
-		50% {
-			transform: translate(-1px, 2px) rotate(-1deg);
-		}
-		60% {
-			transform: translate(-3px, 1px) rotate(0deg);
-		}
-		70% {
-			transform: translate(3px, 1px) rotate(-1deg);
-		}
-		80% {
-			transform: translate(-1px, -1px) rotate(1deg);
-		}
-		90% {
-			transform: translate(1px, 2px) rotate(0deg);
-		}
-		100% {
-			transform: translate(1px, -2px) rotate(-1deg);
-		}
-	}
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
 </style>

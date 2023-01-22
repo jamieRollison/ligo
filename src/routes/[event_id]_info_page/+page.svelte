@@ -1,59 +1,43 @@
 <script>
-  import { page } from "$app/stores";
-  /**
-   * @type {{ event: any; }}
-   */
-  export let data;
+	import { page } from '$app/stores';
+	/**
+     * @type {{ event: any; }}
+     */
+	 export let data;
 </script>
 
 <div class="divide-y">
-  <div
-    class="flex flex-col space-y-4 md:space-y-2 md:flex-row mx-10 py-4 md:justify-between"
-  >
-    <div>
-      <h1 class="font-Jomhuria text-8xl text-white">{data.event.name}</h1>
-      <!-- TODO: handle longer names -->
-      <h3 class="font-Jomhuria text-4xl text-white">
-        {data.event.start_date} | {data.event.location}
-      </h3>
-    </div>
-    <div class="flex space-x-4 justify-center">
-      <!-- TODO: styling - check font, make height full, center bottom text -->
-      <div>
-        <h2 class="font-WorkSans text-8xl text-white flex-auto">
-          {data.event.carbon}
-        </h2>
-        <h3 class="font-WorkSans text-2xl text-white">Tons of CO2</h3>
-      </div>
-      <div>
-        <h2 class="font-WorkSans text-8xl text-white">{data.event.score}</h2>
-        <h3 class="font-WorkSans text-2xl text-white">Overall score</h3>
-      </div>
-    </div>
-  </div>
+	<div class="flex flex-col space-y-4 md:space-y-2 md:flex-row mx-10 py-4 md:justify-between">
+		<div>
+			<h1 class="font-Jomhuria text-8xl text-white">{data.event.name}</h1>
+			<!-- TODO: handle longer names -->
+			<h3 class="font-Jomhuria text-4xl text-white">{data.event.start_date} | {data.event.location}</h3>
+		</div>
+		<div class="flex space-x-4 justify-center">
+			<!-- TODO: styling - check font, make height full, center bottom text -->
+			<div>
+				<h2 class="font-WorkSans text-8xl text-white flex-auto">{data.event.carbon}</h2>
+				<h3 class="font-WorkSans text-2xl text-white">Tons of CO2</h3>
+			</div>
+			<div>
+				<h2 class="font-WorkSans text-8xl text-white">{data.event.score}</h2>
+				<h3 class="font-WorkSans text-2xl text-white">Overall score</h3>
+			</div>
+		</div>
+	</div>
 
   <div class="mx-10 py-4">
     <div
       class="flex flex-col space-y-2 md:flex-row md:justify-center md:space-x-4"
     >
-      <!-- TODO: change for event_ids here -->
-      <!-- TODO: disable buttons if user tries clicking when unauth -->
-
-      <!-- TODO: check that event doesn't already have an organizer review -->
-      <a href="/review_event_id/organizer">
-        <button
-          class="font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
-          >Were you an organizer? Claim this event!</button
-        >
-      </a>
-
-      <!-- TODO: check that att hasn't already reviewed this event -->
-      <a href="/review_event_id/attendee">
-        <button
-          class="font-WorkSans  bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
-          >Were you an attendee? Review this event!</button
-        >
-      </a>
+      <button
+        class="font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
+        >Were you an organizer? Claim this event!</button
+      >
+      <button
+        class="font-WorkSans  bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
+        >Were you an attendee? Review this event!</button
+      >
     </div>
 
     <!-- TODO: styling - add indent to start of bullets, increase spacing inbetween bullets -->
