@@ -9,6 +9,12 @@
 	"/add_event": [
 		"src/routes/+layout.js"
 	],
+	"/add_event/attendee": [
+		"src/routes/+layout.js"
+	],
+	"/add_event/organizer": [
+		"src/routes/+layout.js"
+	],
 	"/how_it_works": [
 		"src/routes/+layout.js"
 	],
