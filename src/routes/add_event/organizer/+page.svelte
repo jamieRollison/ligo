@@ -364,7 +364,7 @@
       <button
         class="font-WorkSans bg-none border-white border-2 text-white hover:bg-white hover:text-teal-500 w-40 rounded-sm py-2 mt-2"
         type="submit"
-        disabled={$isAuthenticated ? `disabled` : ""}>Submit</button
+        disabled={$isAuthenticated}>Submit</button
       >
     </div>
   </form>
