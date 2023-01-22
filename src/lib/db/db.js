@@ -19,15 +19,17 @@ export async function get(collection, param, value) {
     });
     return result
   } else {
-    const result = await client.db('ligo').collection(collection).find({ [param]: value }).toArray();
-    await client.close();
-    return JSON.stringify(result);
+    const result = await (await client.db('ligo').collection(collection).find({[param] : value}).toArray()).map((event) => {
+      // @ts-ignore
+      event._id = event._id.toString();
+      return event;
+    });
   }
 }
 
 /**
  * @param {string} collection
- * @param {{ name: any; location: any; start_date: any; attendance: number; score: number; carbon: number; }} data
+ * @param {any} data
  */
 export async function post(collection, data) {
   console.log(collection, data);
