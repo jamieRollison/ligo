@@ -339,7 +339,7 @@
 
       <div class="flex flex-col mt-4">
         <label class="font-WorkSans text-white" for="compost"
-          >Were there easily accessible recycling/compost bins?
+          >Were there easily accessible compost bins?
         </label>
         <select
           class="font-WorkSans text-black rounded-sm h-7"
