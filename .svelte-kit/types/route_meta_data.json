@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/about": [
+		"src/routes/+layout.js"
+	],
+	"/add_event": [
+		"src/routes/+layout.js"
+	],
+	"/how_it_works": [
+		"src/routes/+layout.js"
+	],
+	"/[event_id]_info_page": [
+		"src/routes/+layout.js"
+	]
+}
