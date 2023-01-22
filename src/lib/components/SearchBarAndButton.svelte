@@ -1,12 +1,14 @@
 <script>
+  import { goto } from "$app/navigation";
   import Typeahead from "svelte-typeahead";
+  import { current_event } from "$lib/stores/events";
+
   /**
    * @type { {name: string;}[] }
    */
   export let events;
 
   const extract = (/** @type {{ name: any; }} */ item) => {
-    console.log(item.name);
     return item.name;
   };
 </script>
@@ -19,6 +21,12 @@
     placeholder={`Search for your event...`}
     data={events}
     {extract}
+    on:select={(e) => {
+      console.log(e?.detail?.original);
+      current_event.set(e?.detail?.original);
+      goto(`${e?.detail?.original?._id}_info_page`);
+    }}
+
   />
 
   <!-- TODO: fix colors -->
