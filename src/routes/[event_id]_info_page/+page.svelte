@@ -6,7 +6,7 @@
 	 export let data;
 </script>
 
-<div class="divide-y">
+<div class="divide-y" id="layout">
 	<div class="flex flex-col space-y-4 md:space-y-2 md:flex-row mx-10 py-4 md:justify-between">
 		<div>
 			<h1 class="font-Jomhuria text-8xl text-white">{data.event.name}</h1>
@@ -107,3 +107,9 @@
     </ul>
   </div>
 </div>
+
+<style>
+	#layout {
+		min-height: 90vh;
+	}
+</style>

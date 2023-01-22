@@ -101,3 +101,9 @@
     </ul>
   </div>
 </nav>
+
+<style>
+	nav {
+	  height: 10vh;
+	}
+	</style>
