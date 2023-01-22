@@ -1,6 +1,7 @@
 <script>
 	import { createForm } from 'svelte-forms-lib';
 	import SEO from '$lib/components/SEO.svelte';
+	import states from '$lib/states'
 
 	const { form, errors, handleChange } = createForm({
 		initialValues: {
@@ -83,10 +84,9 @@
 				bind:value={$form.location}
 			>
 				<option />
-				<option>Indiana</option>
-				<option>Michigan</option>
-				<option>Illinois</option>
-				<option>California</option>
+				{#each states as state}
+					<option>{state.state}</option>
+				{/each}
 			</select>
 		</div>
 		{#if $errors.location}

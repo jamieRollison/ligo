@@ -1,5 +1,6 @@
 import { Client } from 'pg';
 import { DATABASE_URL } from './dbconfig';
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  * @param {string} event_id
@@ -29,7 +30,9 @@ export function post(table, data) {
   const db = new Client({
     connectionString: DATABASE_URL,
   });
-  const query = `INSERT INTO ${table} VALUES (${data})`;
+  const values = `'${uuidv4()}', '${data.name}', '${data.location}', '${data.date}', ${data.attendance}, ${data.score}, ${data.carbon}`;
+  console.log(values)
+  const query = `INSERT INTO ${table} VALUES (${values})})`;
   console.log(query);
   // try {
   //   db.connect();
