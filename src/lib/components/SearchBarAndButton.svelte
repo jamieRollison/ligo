@@ -1,6 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
   import Typeahead from "svelte-typeahead";
+  import { current_event } from "$lib/stores/events";
 
   /**
    * @type { {name: string;}[] }
@@ -21,7 +22,8 @@
     data={events}
     {extract}
     on:select={(e) => {
-      console.log(e?.detail?.original?._id);
+      console.log(e?.detail?.original);
+      current_event.set(e?.detail?.original);
       goto(`${e?.detail?.original?._id}_info_page`);
     }}
   />

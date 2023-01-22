@@ -5,7 +5,7 @@ import * as db from '$lib/db/db.js';
  */
 export async function getEvent(event_id) {
   const events = await db.get('events', '_id', event_id);
-  return events[0];
+  return events ? events[0] : {};
 }
 
 export async function getAllEvents() {
