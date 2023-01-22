@@ -15,6 +15,8 @@
 		"src/routes/+layout.js"
 	],
 	"/add_event/organizer": [
+		"src/routes/add_event/organizer/+page.js",
+		"src/routes/add_event/organizer/+page.server.js",
 		"src/routes/+layout.js"
 	],
 	"/how_it_works": [
@@ -22,6 +24,7 @@
 	],
 	"/[event_id]_info_page": [
 		"src/routes/[event_id]_info_page/+page.js",
+		"src/routes/[event_id]_info_page/+page.server.js",
 		"src/routes/+layout.js"
 	]
 }
