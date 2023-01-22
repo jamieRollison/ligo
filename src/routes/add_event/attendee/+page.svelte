@@ -1,0 +1,1 @@
+add event for attendee

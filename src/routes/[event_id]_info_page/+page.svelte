@@ -35,7 +35,7 @@
 			>
 		</div>
 
-        <!-- TODO: styling - add indent to start of bullets, increase spacing inbetween bullets -->
+		<!-- TODO: styling - add indent to start of bullets, increase spacing inbetween bullets -->
 		<div>
 			<h3 class="text-center mt-6 font-Jomhuria text-4xl text-white">User Testimonials</h3>
 			<ul class="text-gray-700 italic">
@@ -64,31 +64,31 @@
 		</div>
 	</div>
 
-    <div class="mx-10 py-4">
-        <h2 class="text-center font-Jomhuria text-6xl text-white">Suggestions for improvement</h2>
+	<div class="mx-10 py-4">
+		<h2 class="text-center font-Jomhuria text-6xl text-white">Suggestions for improvement</h2>
 
-        <ul class="text-gray-700 list-disc pl-6">
-            <li>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-                </p>
-            </li>
-            <li>
-                <p>
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id est laborum."
-                </p>
-            </li>
-            <li>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-                </p>
-            </li>
-        </ul>
-    </div>
+		<ul class="text-gray-700 list-disc pl-6">
+			<li>
+				<p>
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+				</p>
+			</li>
+			<li>
+				<p>
+					"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+					nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+					deserunt mollit anim id est laborum."
+				</p>
+			</li>
+			<li>
+				<p>
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+				</p>
+			</li>
+		</ul>
+	</div>
 </div>
