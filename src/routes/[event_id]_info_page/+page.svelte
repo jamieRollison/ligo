@@ -27,7 +27,7 @@
         <h2 class="font-WorkSans text-8xl text-white flex-auto">
           {$current_event.carbon}
         </h2>
-        <h3 class="font-WorkSans text-2xl text-white">Tons of CO2</h3>
+        <h3 class="font-WorkSans text-2xl text-white">kg of CO2</h3>
       </div>
       <div>
         <h2 class="font-WorkSans text-8xl text-white">
