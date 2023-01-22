@@ -1,31 +1,30 @@
 <script>
-  import { page } from "$app/stores";
-  console.log($page.params);
+	import { page } from '$app/stores';
+	/**
+     * @type {{ event: any; }}
+     */
+	 export let data;
 </script>
 
 <div class="divide-y">
-  <div
-    class="flex flex-col space-y-4 md:space-y-2 md:flex-row mx-10 py-4 md:justify-between"
-  >
-    <div>
-      <h1 class="font-Jomhuria text-8xl text-white">WWDC</h1>
-      <!-- TODO: handle longer names -->
-      <h3 class="font-Jomhuria text-4xl text-white">
-        December 20, 2018 | California
-      </h3>
-    </div>
-    <div class="flex space-x-4 justify-center">
-      <!-- TODO: styling - check font, make height full, center bottom text -->
-      <div>
-        <h2 class="font-WorkSans text-8xl text-white flex-auto">100</h2>
-        <h3 class="font-WorkSans text-2xl text-white">Tons of CO2</h3>
-      </div>
-      <div>
-        <h2 class="font-WorkSans text-8xl text-white">3/5</h2>
-        <h3 class="font-WorkSans text-2xl text-white">Overall score</h3>
-      </div>
-    </div>
-  </div>
+	<div class="flex flex-col space-y-4 md:space-y-2 md:flex-row mx-10 py-4 md:justify-between">
+		<div>
+			<h1 class="font-Jomhuria text-8xl text-white">{data.event.name}</h1>
+			<!-- TODO: handle longer names -->
+			<h3 class="font-Jomhuria text-4xl text-white">{data.event.start_date} | {data.event.location}</h3>
+		</div>
+		<div class="flex space-x-4 justify-center">
+			<!-- TODO: styling - check font, make height full, center bottom text -->
+			<div>
+				<h2 class="font-WorkSans text-8xl text-white flex-auto">{data.event.carbon}</h2>
+				<h3 class="font-WorkSans text-2xl text-white">Tons of CO2</h3>
+			</div>
+			<div>
+				<h2 class="font-WorkSans text-8xl text-white">{data.event.score}</h2>
+				<h3 class="font-WorkSans text-2xl text-white">Overall score</h3>
+			</div>
+		</div>
+	</div>
 
   <div class="mx-10 py-4">
     <div

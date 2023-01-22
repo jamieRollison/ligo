@@ -1,26 +1,27 @@
 <script>
   import Typeahead from "svelte-typeahead";
 
-  const data = [
-    { state: "WWDC 2019" },
-    { state: "Grace Hopper 2022" },
-    { state: "BoilerMake X" },
-    { state: "HackIllinois" },
-    { state: "Welding Convention of Michigan" },
-  ];
+	const mock_data = [
+		{ name: 'WWDC 2019' },
+		{ name: 'Grace Hopper 2022' },
+		{ name: 'BoilerMake X' },
+		{ name: 'HackIllinois' },
+		{ name: 'Welding Convention of Michigan' }
+	];
 
-  const extract = (/** @type {{ state: any; }} */ item) => item.state;
+	/**
+     * @type { {name: string;}[] }
+     */
+	 export let events;
+
+	// events.subscribe(value => console.log(value))
+
+	const extract = (/** @type {{ name: any; }} */ item) => { console.log(item.name) ; return item.name };
 </script>
 
 <div class="font-WorkSans flex flex-col my-10">
-  <!-- TODO: add icon -->
-  <Typeahead
-    class="rounded"
-    hideLabel
-    placeholder={`Search for your event...`}
-    {data}
-    {extract}
-  />
+	<!-- TODO: add icon -->
+	<Typeahead class="rounded" hideLabel placeholder={`Search for your event...`} data={events} {extract} />
 
   <!-- TODO: fix colors -->
   <a
