@@ -15,14 +15,15 @@
   <div class={$isAuthenticated ? `opacity-100` : `opacity-25`}>
     <div>
       <h1
-        class="font-Jomhuria text-6xl text-white flex justify-center text-center"
+        class="font-WorkSans text-4xl text-white flex justify-center text-center mb-10"
       >
-        Are you an organizer or attendee of this event?
+        Are you an Organizer or Attendee of this event?
       </h1>
+      <img src="assets/girl_holding.png" alt="girl holding a calendar">
     </div>
 
     <div
-      class="flex flex-col space-y-2 md:flex-row md:justify-center md:space-x-8"
+      class="flex flex-col items-center mt-10 space-y-2 md:flex-row md:justify-center md:space-x-8"
     >
       <a
         class="w-48 text-center font-WorkSans bg-white/50 hover:bg-gray-100 rounded text-gray-800 py-2 px-4 mt-2"
