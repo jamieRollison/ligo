@@ -6,15 +6,12 @@ import { v4 as uuidv4 } from 'uuid';
  * @param {string} event_id
  */
 export async function get(event_id) {
-  const db = new Client({
-    connectionString: DATABASE_URL,
-  });
+  const client = new Client(DATABASE_URL);
   try {
-    db.connect();
-    const query = `SELECT * FROM events WHERE id = '${event_id}'`;
-    console.log(query);
-    const result = await db.query(query);
-    db.end();
+    client.connect();
+    const query = event_id? `SELECT * FROM events WHERE id = '${event_id}'` : `SELECT * FROM events`;
+    const result = await client.query(query);
+    client.end();
     return result.rows;
   } catch (error) {
     console.log(error);
@@ -26,12 +23,8 @@ export async function get(event_id) {
  * @param {{ name: any; location: any; start_date: any; attendance: number; score: number; carbon: number; }} data
  */
 export function post(table, data) {
-  console.log('data', data);
-  const db = new Client({
-    connectionString: DATABASE_URL,
-  });
+  const client = new Client(process.env.DATABASE_URL);
   const values = `'${uuidv4()}', '${data.name}', '${data.location}', '${data.start_date}', ${data.attendance}, ${data.score}, ${data.carbon}`;
-  console.log(values)
   const query = `INSERT INTO ${table} VALUES (${values})})`;
   console.log(query);
   // try {

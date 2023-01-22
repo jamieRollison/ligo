@@ -1,20 +1,21 @@
 <script>
 	import Typeahead from 'svelte-typeahead';
+	import { events } from '$lib/stores/events.js';
 
-	const data = [
-		{ state: 'WWDC 2019' },
-		{ state: 'Grace Hopper 2022' },
-		{ state: 'BoilerMake X' },
-		{ state: 'HackIllinois' },
-		{ state: 'Welding Convention of Michigan' }
+	const mock_data = [
+		{ name: 'WWDC 2019' },
+		{ name: 'Grace Hopper 2022' },
+		{ name: 'BoilerMake X' },
+		{ name: 'HackIllinois' },
+		{ name: 'Welding Convention of Michigan' }
 	];
 
-	const extract = (/** @type {{ state: any; }} */ item) => item.state;
+	const extract = (/** @type {{ name: any; }} */ item) => item.name;
 </script>
 
 <div class="font-WorkSans flex flex-col my-10">
 	<!-- TODO: add icon -->
-	<Typeahead class="rounded" hideLabel placeholder={`Search for your event...`} {data} {extract} />
+	<Typeahead class="rounded" hideLabel placeholder={`Search for your event...`} data={mock_data} {extract} />
 
 	<!-- TODO: fix colors -->
 	<a

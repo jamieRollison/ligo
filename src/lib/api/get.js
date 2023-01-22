@@ -7,3 +7,7 @@ export async function getEvent(event_id) {
   const events = await db.get(event_id);
   return events[0];
 }
+
+export async function getAllEvents() {
+  return await db.get('');
+}

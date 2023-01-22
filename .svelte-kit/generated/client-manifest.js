@@ -13,7 +13,7 @@ export const nodes = [() => import('./nodes/0'),
 export const server_loads = [];
 
 export const dictionary = {
-	"/": [2],
+	"/": [~2],
 	"/about": [4],
 	"/add_event": [~5],
 	"/add_event/attendee": [6],

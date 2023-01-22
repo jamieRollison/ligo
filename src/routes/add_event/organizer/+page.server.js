@@ -11,7 +11,6 @@ export const actions = {
     const carbon = 0.0;
     // do math
     const event = {name, location, start_date, attendance, score, carbon};
-    console.log('action', event);
     postEvent(event);
 }
 }

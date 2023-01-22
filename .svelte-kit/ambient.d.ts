@@ -75,6 +75,7 @@ declare module '$env/static/private' {
 	export const HOME: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL: string;
+	export const npm_config_strict_ssl: string;
 	export const LC_TERMINAL_VERSION: string;
 	export const HOMEBREW_PREFIX: string;
 	export const ITERM_SESSION_ID: string;
@@ -172,6 +173,7 @@ declare module '$env/dynamic/private' {
 		HOME: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL: string;
+		npm_config_strict_ssl: string;
 		LC_TERMINAL_VERSION: string;
 		HOMEBREW_PREFIX: string;
 		ITERM_SESSION_ID: string;
