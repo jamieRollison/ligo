@@ -34,7 +34,7 @@
 <nav class="flex items-center justify-between flex-wrap p-6">
   <div class="flex items-center flex-shrink-0 text-white mr-6">
     <a class="flex" href="/">
-      <img alt="ligo logo" src="/assets/logo.png" class="w-10 mr-2" />
+      <img alt="the ligo logo" src="./assets/logo.png" class="w-10 mr-2" />
       <span class="font-Jomhuria text-5xl">Ligo</span>
     </a>
   </div>

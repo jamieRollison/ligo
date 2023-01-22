@@ -1,6 +1,6 @@
 // import { Client } from 'pg';
 import { mongo } from './dbconfig';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
 
 /**
@@ -11,19 +11,30 @@ import { MongoClient } from 'mongodb';
 export async function get(collection, param, value) {
   const client = new MongoClient(mongo);
   await client.connect();
-  if (param === '') {
+  if (param === '_id') {
+    console.log('value', value);
+    const ob_id = new ObjectId(value)
+    const result = await (await client.db('ligo').collection(collection).find({"_id": ob_id})).map((event) => {
+      // @ts-ignore
+      event._id = event._id.toString()
+      return event;
+    })
+    // console.log(result);
+    return result;
+  } else if (param === '') {
     const result = await (await client.db('ligo').collection(collection).find({}).toArray()).map((event) => {
       // @ts-ignore
-      event._id = event._id.toString();
+      event._id = event._id.toString()
       return event;
     });
-    return result
+    return result;
   } else {
     const result = await (await client.db('ligo').collection(collection).find({[param] : value}).toArray()).map((event) => {
       // @ts-ignore
       event._id = event._id.toString();
       return event;
     });
+    return result;
   }
 }
 
