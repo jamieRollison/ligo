@@ -8,7 +8,11 @@
       location: "",
       startDate: "",
       attendance: 0,
+      swag: "", //Yes or No
       food: "", // Yes or No
+      shirt: "", // Yes or No
+      sweater: "", // Yes or No
+      paper: "", // Yes or No
       servings: 0,
       pre_order: "", // Yes or No
       vegitarian: "", // Yes or No
@@ -113,6 +117,81 @@
     {#if $errors.attendance}
       <small class="font-WorkSans text-red-500">{$errors.attendance}</small>
     {/if}
+
+    <div class="flex flex-col mt-4">
+      <label class="font-WorkSans text-white" for="swag"
+        >Did the event provide free 'swag'?
+      </label>
+      <h3 class="italic font-WorkSans text-white">
+        Ex. free shirts, stickers, pens, etc.
+      </h3>
+      <select
+        class="font-WorkSans text-black rounded-sm h-8"
+        id="swag"
+        name="swag"
+        on:change={handleChange}
+        bind:value={$form.swag}
+      >
+        <option />
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      {#if $form.swag === "Yes"}
+        <div
+          class="bg-cyan-100 border-blue-200 border-2 bg-opacity-20 mt-4 rounded-md p-3 flex flex-col"
+        >
+          <label class="font-WorkSans text-gray-600 mb-1" for="shirt"
+            >Were you given a free shirt upon entry?
+          </label>
+          <select
+            class="font-WorkSans text-black rounded-sm h-8"
+            id="shirt"
+            name="shirt"
+            on:change={handleChange}
+            bind:value={$form.shirt}
+          >
+            <option />
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
+          <label class="font-WorkSans text-gray-600 mb-1 mt-2" for="sweater"
+            >Were you given a heavier piece of clothing upon entry?
+          </label>
+          <h3 class="italic font-WorkSans text-gray-600">
+            Ex. sweaters, hats, socks, reusable bags, etc.
+          </h3>
+          <select
+            class="font-WorkSans text-black rounded-sm h-8"
+            id="sweater"
+            name="sweater"
+            on:change={handleChange}
+            bind:value={$form.sweater}
+          >
+            <option />
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
+          <label class="font-WorkSans text-gray-600 mb-1 mt-2" for="paper"
+            >Were you given a paper brochure, sticker, or other paper item upon
+            entry?
+          </label>
+          <select
+            class="font-WorkSans text-black rounded-sm h-8"
+            id="paper"
+            name="paper"
+            on:change={handleChange}
+            bind:value={$form.paper}
+          >
+            <option />
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      {/if}
+    </div>
 
     <div class="flex flex-col mt-4">
       <label class="font-WorkSans text-white" for="food"
@@ -234,6 +313,7 @@
         </div>
       {/if}
 
+      <!-- TODO: change this to just composting -->
       <div class="flex flex-col mt-4">
         <label class="font-WorkSans text-white" for="compost"
           >Were there easily accessible recycling/compost bins?
