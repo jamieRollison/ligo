@@ -23,14 +23,14 @@ export async function get(event_id) {
 
 /**
  * @param {string} table
- * @param {{ name: any; location: any; date: any; attendance: number; score: number; carbon: number; }} data
+ * @param {{ name: any; location: any; start_date: any; attendance: number; score: number; carbon: number; }} data
  */
 export function post(table, data) {
   console.log('data', data);
   const db = new Client({
     connectionString: DATABASE_URL,
   });
-  const values = `'${uuidv4()}', '${data.name}', '${data.location}', '${data.date}', ${data.attendance}, ${data.score}, ${data.carbon}`;
+  const values = `'${uuidv4()}', '${data.name}', '${data.location}', '${data.start_date}', ${data.attendance}, ${data.score}, ${data.carbon}`;
   console.log(values)
   const query = `INSERT INTO ${table} VALUES (${values})})`;
   console.log(query);

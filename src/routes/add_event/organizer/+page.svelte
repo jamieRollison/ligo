@@ -7,7 +7,7 @@
     initialValues: {
       name: "",
       location: "",
-      start_date: "",
+      start_date: Date(),
       attendance: 0,
       food: "", // Yes or No
       servings: 0,
