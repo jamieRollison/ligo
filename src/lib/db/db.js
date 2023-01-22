@@ -1,5 +1,5 @@
 // import { Client } from 'pg';
-import { mongo } from './dbconfig';
+// import { mongo } from './dbconfig';
 import { MongoClient, ObjectId } from 'mongodb';
 
 
@@ -9,7 +9,7 @@ import { MongoClient, ObjectId } from 'mongodb';
  * @param {any} value
  */
 export async function get(collection, param, value) {
-  const client = new MongoClient(mongo);
+  const client = new MongoClient(process.env.mongo);
   await client.connect();
   if (param === '_id') {
     console.log('value', value);
@@ -44,11 +44,11 @@ export async function get(collection, param, value) {
  */
 export async function post(collection, data) {
   console.log(collection, data);
-  // const client = new MongoClient(mongo);
-  // await client.connect();
-  // const result = await client.db('ligo').collection(collection).insertOne(data);
-  // console.log(result);
-  // await client.close();
-  // return result;
+  const client = new MongoClient(process.env.mongo);
+  await client.connect();
+  const result = await client.db('ligo').collection(collection).insertOne(data);
+  console.log(result);
+  await client.close();
+  return result;
 }
   
