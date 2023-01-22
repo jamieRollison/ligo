@@ -15,10 +15,6 @@
 
 <style>
   footer {
-    margin-top: 40px;
-    position: absolute;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
+    height: 20vh;
   }
 </style>
