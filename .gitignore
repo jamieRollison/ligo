@@ -105,3 +105,6 @@ dist
 
 # DB secret file
 api/dbconfig.js
+
+# Auth secret file
+auth.config.js
